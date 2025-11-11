@@ -2,6 +2,7 @@ import React from "react";
 
 import Logo from "../assets/logo.avif";
 import { NavLink } from "react-router";
+import Button from "./Button";
 
 const Navbar = () => {
   
@@ -37,16 +38,16 @@ const Navbar = () => {
 
   return (
     <div className="navbar bg-base-100 shadow-sm sticky top-0 z-50 px-3 py-2">
-      {/* ✅ Navbar Start */}
+
       <div className="navbar-start">
-        {/* 🔹 Mobile dropdown */}
+
         <div className="dropdown">
           <div
             tabIndex={0}
             role="button"
             className="btn btn-ghost lg:hidden btn-sm"
           >
-            {/* Hamburger Icon */}
+     
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -63,7 +64,7 @@ const Navbar = () => {
             </svg>
           </div>
 
-          {/* ✅ Dropdown menu */}
+
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-48"
@@ -72,7 +73,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* ✅ Logo and Name */}
+
         <div className="flex items-center gap-2">
           <img src={Logo} alt="" className="w-9 h-9 rounded-full" />
           <NavLink
@@ -84,26 +85,24 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* ✅ Navbar Center for large screens */}
+
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-[16px] font-medium">
           {navLinks}
         </ul>
       </div>
 
-      {/* ✅ Navbar End — Always visible buttons */}
+  
       <div className="navbar-end flex gap-2">
         <NavLink
           to="/login"
-          className="btn btn-sm bg-indigo-600 text-white hover:bg-indigo-700"
+          
         >
-          Login
+          <Button text="Login"></Button>
         </NavLink>
         <NavLink
-          to="/register"
-          className="btn btn-sm bg-green-600 text-white hover:bg-green-700"
-        >
-          Register
+          to="/register">
+          <Button text="Register"></Button>
         </NavLink>
       </div>
     </div>

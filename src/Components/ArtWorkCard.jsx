@@ -13,7 +13,7 @@ const ArtworkCard = ({ artwork }) => {
   return (
     <div className="card bg-base-100 shadow-md hover:shadow-xl transition duration-300 rounded-2xl overflow-hidden border border-gray-100">
     
-      <figure className="relative">
+      <div className="relative">
         <img
           src={image}
           alt=""
@@ -23,7 +23,7 @@ const ArtworkCard = ({ artwork }) => {
         <button className="absolute top-3 right-3 bg-white p-2 rounded-full hover:bg-red-100 transition">
           <FaRegHeart className="text-red-500 text-lg" />
         </button>
-      </figure>
+      </div>
 
 
       <div className="p-4 flex flex-col justify-between h-56">
