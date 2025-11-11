@@ -7,6 +7,7 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Root from './Layouts/Root.jsx';
 import Home from './Pages/Home.jsx';
+import ExploreArtWorks from './Pages/ExploreArtWorks';
 
 
 
@@ -19,10 +20,11 @@ const router = createBrowserRouter([
       index: true,
       Component: Home ,
     },
-    // {
-    //   path: '/plants',
-    //   Component: Plants,
-    // },
+    {
+      path: '/artworks',
+      element: <ExploreArtWorks></ExploreArtWorks>,
+      loader: ()=> fetch('http://localhost:3000/artworks')
+    },
     // {
     //   path: '/plants/:plantId',
     //   element: 
